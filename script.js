@@ -1,5 +1,5 @@
-let playerWins;
-let playerLosses;
+let playerWins = 0;
+let playerLosses = 0;
 function getComputerChoice() {
     let computerSelection = Math.floor(Math.random() * 3);
     if (computerSelection == 0) {
@@ -41,10 +41,13 @@ function game() {
         console.log(result);
     }
     if (playerWins == playerLosses) {
-        console.log("It is a tie!");
+        winner = "There is no winner! it is a tie!";
     } else if (playerWins > playerLosses) {
-        console.log("The player wins!");
+        winner = "The winner is the player!";
     } else {
-        console.log("The computer wins!");
+        winner = "The winner is the computer!";
     }
+    console.log(winner);
+    playerLosses = 0;
+    playerWins = 0;
 }
