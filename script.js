@@ -28,26 +28,3 @@ function playRound(playerSelection, computerSelection) {
                 return [result, playerLosses];
             }
 }
-
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("What do you choose?");
-        playerSelection = playerSelection.toLowerCase();
-        if (!(playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors")) {
-            return result = "That is not a valid option";
-        }
-        computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
-        console.log(result);
-    }
-    if (playerWins == playerLosses) {
-        winner = "There is no winner! it is a tie!";
-    } else if (playerWins > playerLosses) {
-        winner = "The winner is the player!";
-    } else {
-        winner = "The winner is the computer!";
-    }
-    console.log(winner);
-    playerLosses = 0;
-    playerWins = 0;
-}
